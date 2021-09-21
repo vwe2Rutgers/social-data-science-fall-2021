@@ -254,7 +254,7 @@ receivers <- character() # list of those receiving ties
 k <- 5
 for (i in 1:dim(followers)[1]) {
   i.id <- followers$login[i] # get follower name
-  receivers <- append(receivers, "t-davidson") # update edge-listss
+  receivers <- append(receivers, "t-davidson") # update edge-lists
   senders <- append(senders, i.id)
   i.followers <- get.followers(followers$followers_url[i]) # get i's followers
   for (j in 1:dim(i.followers)[1]) {# for each follower
@@ -270,7 +270,7 @@ We can now use this function to build a network.
 # APIs
 ## Calling an API in R
 ```{r, echo=TRUE, tidy=FALSE, mysize=TRUE, size='\\footnotesize', include=TRUE}
-# install.packages(c("igraph", "ggnetwork")) # uncomment and run to install
+ install.packages(c("igraph", "ggnetwork")) # uncomment and run to install
 library(igraph)
 library(ggnetwork)
 
